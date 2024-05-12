@@ -4,9 +4,9 @@ import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, shareReplay } from 'rxjs/operators';
 import { CLIENT_ID, CLIENT_SECRET } from '../Credentials/GithubCred';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class GithubService {
 
   private readonly cache: Map<string, Observable<any>> = new Map<string, Observable<any>>();
