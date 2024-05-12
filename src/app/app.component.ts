@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from './services/api.service';
+import { Component ,OnInit} from '@angular/core';
+import { GithubService } from './Services/github.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  title = 'fyle';
   constructor(
-    private apiService: ApiService
+    private apiService: GithubService
   ) {}
 
   ngOnInit() {
-    this.apiService.getUser('johnpapa').subscribe(console.log);
+    this.apiService.getProfile('johnpapa').subscribe(console.log);
   }
 }
